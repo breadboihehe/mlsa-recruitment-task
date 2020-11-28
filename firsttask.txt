@@ -1,0 +1,49 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+	int first_array[1000];
+	int second_array[1000];
+	int k, n, l;
+	
+std::cout << "Enter number of integers in an array" << endl;
+std::cin >> n;
+
+if ( (n < 1)||(n>1000))
+{ 
+	std::cout << "please enter number between 1 and 1000" << endl;
+	return 0;
+}
+//taking input for first array
+int i;
+	std::cout << "enter first set of numbers" << endl;
+	
+for (i=0; i<n; i++)
+{
+	std::cin >> first_array[i];
+}
+
+//taking input for second array
+	std::cout << "enter second set of numbers" << endl;
+	
+for (i=0; i<n; i++)
+{
+	std::cin >> second_array[i];
+}
+
+		for (i=0; i<n; i++)
+		{
+			if ( first_array[i] > second_array[i])
+			{
+				std::cout << "NO" << endl;
+				return 0;
+			}
+		}
+		
+	std::cout << "Yes" << endl;
+
+return 0;	
+}
