@@ -7,6 +7,7 @@ int main()
 {
 	int first_array[1000];
 	int second_array[1000];
+	int iDiff[1000];
 	int k, n, l;
 	
 std::cout << "Enter number of integers in an array" << endl;
@@ -33,17 +34,29 @@ for (i=0; i<n; i++)
 {
 	std::cin >> second_array[i];
 }
+int sum = 0;
 
-		for (i=0; i<n; i++)
+int avg;
+	for (i=0; i<n; i++)
 		{
-			if ( first_array[i] > second_array[i])
-			{
-				std::cout << "NO" << endl;
-				return 0;
-			}
+		  	iDiff[i] = second_array - first_array;
+		  	sum += iDiff[i];
+		  	if(iDiff[i]>0)
+		  		k++;
 		}
 		
-	std::cout << "Yes" << endl;
+		avg = sum/k;
+	for (i=0; i<n; i++)
+		{
+		  	if(iDiff[i]>0 )
+		  	if(avg != iDiff[i] )
+		  	
+		  	
+		  	std::cout << "No" << endl;
+		  	return 0;
+		  	
+		}
+		std::cout << "Yes" << endl;
 
-return 0;	
+ return 0;	
 }
